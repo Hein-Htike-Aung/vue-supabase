@@ -19,9 +19,9 @@
     >
       <router-link
         class="flex flex-col items-center bg-light-grey p-8 shadow-md cursor-pointer"
-        :to="{ name: '' }"
         v-for="(workout, idx) in data"
         :key="idx"
+        :to="{ name: 'view-workout', params: { workoutId: workout.id } }"
       >
         <!-- Cardio -->
         <img
